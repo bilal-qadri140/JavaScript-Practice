@@ -17,3 +17,8 @@ const names2 = ["umar","umair","nomi"]
 
 console.log(Array.isArray("bilal"));
 console.log(Array.from("bilal")); // convert into array
+
+
+const numbers = [23, 5, 100, 56, 9, 13, 37, 10, 1]
+numbers.sort((a,b) => (a-b))
+console.log(numbers);
