@@ -13,6 +13,9 @@ const perosn = {
 // perosn["edu"] = 16;
 // console.log(perosn);
 
-console.log(perosn.fullName());
+// console.log(perosn.fullName());
 
 // console.log(typeof (perosn));
+
+console.log(Object.keys(perosn));
+console.log(Object.values(perosn));
