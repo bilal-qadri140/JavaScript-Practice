@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Elements using JS</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+    <style>
+        .main-div{
+            width: 50%;
+            height: 200px;
+            background-color: green;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 25%;
+            font-weight: bold;
+            font-family: 'cooper';
+            font-size: 30px;
+            padding: 10px;
+        }
+    </style>
+    <div id="first">First</div>
+    <div id="second">Second</div>
+
+</body>
+<script>
+    // console.log('Hello javascript')
+   const div = document.createElement('div')
+   let text = document.createTextNode('Hello JavaScript')
+   const div2 = document.createElement('div')
+   let text2 = document.createTextNode('Hello JavaScript')
+   div.className = 'main-div'
+
+   div.innerHTML = 'text in div 1'
+   div2.innerHTML = 'text in div 2'
+   document.body.append(div)
+   div.after(div2)
+//    setTimeout(() => div.remove(), 3000);
+//    console.log(div);
+</script>
+</html>
