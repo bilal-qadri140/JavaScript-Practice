@@ -8,14 +8,12 @@
 <body style="background-color: #212121; color: #fff;">
     
     <style>
-        .main-div{
+        .parent{
             width: 50%;
-            height: 200px;
+            height: auto;
             background-color: green;
             border-radius: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
             margin-left: 25%;
             font-weight: bold;
             font-family: 'cooper';
@@ -23,23 +21,97 @@
             padding: 10px;
         }
     </style>
-    <div id="first">First</div>
-    <div id="second">Second</div>
+    <!-- <div id="first">First</div>
+    <div id="second">Second</div> -->
 
+    <!-- <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+    </div> -->
 </body>
 <script>
-    // console.log('Hello javascript')
-   const div = document.createElement('div')
-   let text = document.createTextNode('Hello JavaScript')
-   const div2 = document.createElement('div')
-   let text2 = document.createTextNode('Hello JavaScript')
-   div.className = 'main-div'
 
-   div.innerHTML = 'text in div 1'
-   div2.innerHTML = 'text in div 2'
-   document.body.append(div)
-   div.after(div2)
+    function createNewDiv(className,bgColor = 'green'){
+        let div = document.createElement('div')
+        div.setAttribute('class',`${className}`)
+        div.style.backgroundColor = bgColor
+        return div
+    }
+    
+    let parent = document.querySelector('.parent')
+    let div = createNewDiv('main','red')
+    // let div = document.createElement('div')
+    // div.setAttribute('class','main-div')
+    // div.style.backgroundColor = 'green'
+    let h1 = document.createElement('h1')
+    let text = document.createTextNode('This is text')
+
+    // styling
+    div.style.padding = '15px'
+    div.style.borderRadius = '25px'
+    div.style.textAlign = 'center'
+    div.style.fontWeight = 'bold'
+    div.style.fontSize = '30px'
+
+    div.appendChild(text) // append text with div
+    console.log(div);
+
+    document.body.appendChild(div)//append div with body
+
+
+    // console.log(parent);
+    // console.log(parent.innerText);
+    // console.log(parent.children);
+    // console.log(parent.children[0]);
+
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerText);
+    // }
+    // parent.firstElementChild.style.backgroundColor = 'red'
+    // parent.lastElementChild.style.backgroundColor = 'red'
+
+    // let day = document.querySelector('.day')
+    // console.log(day.parentElement)
+    // console.log(day.parentNode)
+    // console.log(day.nextElementSibling);
+    // console.log(day.previousElementSibling); // null
+
+    // console.log('Nodes: ',parent.childNodes);
+
+
+
+
+
+
+
+
+
+
+
+
+    // console.log('Hello javascript')
+//    const div = document.createElement('div')
+//    let text = document.createTextNode('Hello JavaScript')
+//    const div2 = document.createElement('div')
+//    let text2 = document.createTextNode('Hello JavaScript')
+//    div.className = 'main-div'
+
+//    div.innerHTML = 'text in div 1'
+//    div2.innerHTML = 'text in div 2'
+//    document.body.append(div)
+//    div.after(div2)
 //    setTimeout(() => div.remove(), 3000);
 //    console.log(div);
+
+
+
+
+
 </script>
 </html>
