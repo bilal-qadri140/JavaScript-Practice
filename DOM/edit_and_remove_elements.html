@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove Elements</title>
+</head>
+<body style="background-color: #212121; color: #fff;font-weight: bold; font-size: 30px;">
+    <ol class="language">
+        <li>JavaScript</li>
+    </ol>
+</body>
+
+<script>
+    function addListItem(langName){
+        let li = document.createElement('li')
+        li.appendChild(document.createTextNode(`${langName}`))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addListItem('Python')
+    addListItem('Java')
+    addListItem('Ruby')
+    addListItem('Cpp')
+    addListItem('Go Lang')
+
+    // Edit  first way
+    let secondChild = document.querySelector('li:nth-child(2)')
+    // secondChild.innerHTML = 'Ruby on Rail'
+    // secondChild.innerHTML = 'Mojo'
+
+    let newLi = document.createElement('li')
+    newLi.appendChild(document.createTextNode('Mojo'))
+    secondChild.replaceWith(newLi)
+
+    // edit second way
+
+    let lastLang = document.querySelector('li:last-child')
+
+    lastLang.outerHTML = '<li>TypeScript</li>'
+
+
+    // Remove 
+    let item = document.querySelector('li:nth-child(3)')
+    item.remove()
+
+
+
+
+</script>
+</html>
