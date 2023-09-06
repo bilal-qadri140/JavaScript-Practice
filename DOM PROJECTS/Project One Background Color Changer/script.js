@@ -1,8 +1,3 @@
-# PROJECTS RELATED TO DOM
-
-## Project 1 (Background color changer)
-
-```javascript
 let buttons = document.querySelectorAll('.buttons');
 let body = document.querySelector('body');
 
@@ -28,4 +23,3 @@ buttons.forEach((button) => {
     }
   });
 });
-```
