@@ -1,4 +1,4 @@
-# PROJECTS RELATED TO DOM
+# PROJECTS RELATED TO DOM (JS solutions)
 
 ## Project 1 (Background color changer)
 
@@ -28,4 +28,9 @@ buttons.forEach((button) => {
     }
   });
 });
+```
+## Project 2 (BMI Calculator)
+```javascript
+
+
 ```
