@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Gausess Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="heading">
+            Number Gausses Game
+        </h1>
+        <p>Try and guess a random number between 1 and 5.</p>
+        <p>You have 5 attempts to guess the right number.</p>
+        <br>
+        <form>
+            <label>Guess a number</label><br>
+            <input class="input" type="text" id="guess"><br>
+            <input class="btn" id="btn" type="submit" value="Submit">
+        </form>
+        <div class="resultParas">
+            <p>Previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastResult">5</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
