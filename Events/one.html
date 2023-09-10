@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: #212121; text-align: center;">
+    <input style="height: 40px; background-color: #212121; color: aliceblue; border-radius: 10px; border-style: none; font-weight: bold; margin: 5px;" 
+    type="button" id="btn" value="Click me to change background color">
+</body>
+<script>
+    document.querySelector('#btn').addEventListener('click', changeColor)
+
+    function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+    }
+    function changeColor() {
+        let backgroundColor = `rgb(${random(255)},${random(255)},${random(255)})`
+        document.body.style.backgroundColor = backgroundColor
+    }
+</script>
+
+</html>
