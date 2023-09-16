@@ -73,7 +73,11 @@ setInterval(()=>{
     clock.innerHTML = date
 },1000)
 ```
+
+
 ## Project 4 (Guess random number)
+
+
 ```javascript
 let random = parseInt(Math.random() * 5 + 1)
 // console.log(random);
@@ -172,3 +176,61 @@ function newGame() {
     })
 }
 ```
+
+## Project 5 (Keyboard check)
+
+```javascript
+let insert = document.getElementById('insert')
+
+document.addEventListener('keydown',(e)=>{
+    insert.innerHTML = `
+        <div class = 'color'>
+            <table>
+
+            <tr>
+            <th>Key</th>
+            <th>KeyCode</th>
+            <th>Code</th>
+            </tr>
+
+            <tr>
+            <td>${e.key === " " ? 'Space': e.key}</td>
+            <td>${e.keyCode}</td>
+            <td>${e.code}</td>
+            </tr>
+            
+        </table>
+        </div>
+    `
+})
+```
+
+
+## Project 6 (Unlimited colors)
+
+```javascript
+    const randomColor = () => {
+        let hex = '0123456789ABCDEF'
+        let color = '#'
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)]
+        }
+        return color
+    }
+
+    let intervalID
+    document.getElementById('start').addEventListener('click', (e) => {
+
+        if (!intervalID) {
+            intervalID = setInterval(() => {
+                document.body.style.backgroundColor = randomColor()
+            }, 1000);
+        }
+    })
+
+    document.getElementById('stop').addEventListener('click', (e) => {
+        clearInterval(intervalID)
+        intervalID = null
+    })
+```
+
