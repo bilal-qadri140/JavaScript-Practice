@@ -86,3 +86,25 @@ async function consumePromiseFive() {
 }
 
 consumePromiseFive()
+
+
+// fetch 
+async function getAllUser(){
+    const response = await fetch('https://api.github.com/users/hiteshchoudhary')
+    const data = await response.json()
+    console.log(data.followers);
+}
+getAllUser()
+
+
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then((res)=>{
+    // const data = res.json()
+    // console.log(data);
+    return res.json()
+}).then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log(err);
+})
